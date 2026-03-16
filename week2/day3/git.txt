@@ -1,4 +1,4 @@
-will be merge confict 
+checking the merge confict
 added new line 
 added new line 
 test the pull comand
