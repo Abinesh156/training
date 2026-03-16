@@ -1,4 +1,6 @@
-checking the merge confict
+making confict
+added new line 
+>>>>>>> feature/newtraning
 added new line 
 added new line 
 test the pull comand
