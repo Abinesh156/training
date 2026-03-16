@@ -1,0 +1,12 @@
+#!/bin/bash
+
+usage=$(df -h / | awk 'NR==2 {print $5}')
+limit=80
+
+value=${usage%\%}
+
+if [ "$value" -gt "$limit" ]; then
+    echo "ALERT: Disk usage is $usage"
+else
+    echo "Disk is in normal state current value :$value"
+fi

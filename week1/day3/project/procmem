@@ -1,0 +1,5 @@
+#!/bin/bash/
+
+read -p "Enter the PID to find the memory usage:" PID
+
+cat /proc/$PID/status | grep VmRSS | awk -v pid=$PID '{print "The total memory used by ",pid,"is",$2/1024 " MB"}'

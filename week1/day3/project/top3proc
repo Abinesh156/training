@@ -1,0 +1,6 @@
+#!/bin/bash
+while true;
+do
+ps auxc --sort=-%cpu,-%mem | head -4  > top3proc.log
+sleep 3
+done

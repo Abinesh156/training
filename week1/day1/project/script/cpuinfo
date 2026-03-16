@@ -1,0 +1,55 @@
+#!/bin/bash
+
+while true
+do
+echo "====== CPU / SYSTEM INFO MENU ======"
+echo "1. Show CPU Info"
+echo "2. Show CPU Stat"
+echo "3. Show Load Average"
+echo "4. Show Uptime"
+echo "5. Show Interrupts"
+echo "6. Quit"
+echo "------------------------------------"
+
+read -p "Select option: " choice
+
+case $choice in
+
+1)
+echo "------ /proc/cpuinfo ------"
+cat /proc/cpuinfo
+;;
+
+2)
+echo "------ /proc/stat ------"
+cat /proc/stat
+;;
+
+3)
+echo "------ /proc/loadavg ------"
+cat /proc/loadavg
+;;
+
+4)
+echo "------ /proc/uptime ------"
+cat /proc/uptime
+;;
+
+5)
+echo "------ /proc/interrupts ------"
+cat /proc/interrupts
+;;
+
+6|"q")
+echo "Exiting..."
+break
+;;
+
+*)
+echo "Invalid option. Please select a number."
+;;
+
+esac
+
+echo
+done

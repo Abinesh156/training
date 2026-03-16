@@ -1,0 +1,8 @@
+#/bin/bash
+
+grep '/home' /etc/passwd | awk -F: '{print $1}' > user.txt
+
+while read user
+do
+    grep "^$user:" /etc/passwd | awk -F: '{print $6}'
+done < user.txt

@@ -1,0 +1,4 @@
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+abinesh+ 1212661 13.8  1.0 1461992160 334816 ?   Sl   07:49   6:16 ulaa
+abinesh+ 1208551  6.2  1.1 51545872 357960 ?     Sl   07:32   3:52 ulaa
+abinesh+ 1215816  5.4  0.6 1460192800 209188 ?   Sl   08:00   1:50 ulaa

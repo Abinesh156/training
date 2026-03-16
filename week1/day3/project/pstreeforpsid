@@ -1,0 +1,11 @@
+#!/bin/bash/
+
+read -p "Enter the PID to find the memory usage : " PID
+echo "----------------------------------------------------------------"
+cat /proc/$PID/status | grep VmRSS | awk -v pid=$PID '{print "The total memory used by ",pid,"is",$2/1024 " MB"}'
+
+
+echo "________________________________________________________________"
+echo "The process tree for the '$PID'"
+echo "----------------------------------------------------------------"
+pstree -aupc $PID

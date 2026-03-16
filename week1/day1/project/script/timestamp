@@ -1,0 +1,11 @@
+#!/bin/bash
+
+LOGFILE="device.log"
+
+echo "Starting udev device monitor..."
+echo "Logs will be saved to $LOGFILE"
+
+udevadm monitor | while read line
+do
+    echo "$(date '+%Y-%m-%d %H:%M:%S') $line" >> "$LOGFILE"
+done

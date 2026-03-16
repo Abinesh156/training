@@ -1,0 +1,8 @@
+#!/bin/bash
+
+get_uptime() {
+    echo "System Uptime:"
+    uptime -p
+}
+
+get_uptime

@@ -1,0 +1,29 @@
+#!/bin/bash
+
+echo "If need to create multiple directory type m"
+read -p "Enter the name of the directory to create : " num
+
+if [ "$num" == "m" ]; then
+    read -p "Enter the names of multiple directories (space separated): " dir
+
+    for d in $dir
+    do
+        mkdir "$d"
+        if [ $? -ne 0 ]; then
+            echo "$d already exists choose another name"
+        else
+            echo "$d directory was created"
+        fi
+    done
+
+else
+    if [ -d "$num" ]; then
+        echo "$num already exists please choose another name"
+    else
+        mkdir "$num"
+        echo "Directory $num was created"
+    fi
+fi
+
+
+
